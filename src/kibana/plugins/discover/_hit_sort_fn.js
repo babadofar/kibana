@@ -36,7 +36,16 @@ define(function () {
 
         var aSorts = hitA.sort || [];
         var bSorts = hitB.sort || [];
-
+        // If no sorting defined, sort by _score
+        if ((aSorts.length === 0) && (bSorts.length === 0)) {
+          if (hitA._score > hitB._score) {
+            return -1;
+          }
+          else if (hitA._score < hitB._score)
+            return 1;
+          else
+            return 0;
+        }
         // walk each sort value, and compair until one is different
         for (var i = 0; i < bSorts.length; i++) {
           var a = aSorts[i];
@@ -52,7 +61,6 @@ define(function () {
             break;
           }
         }
-
         if (bBelowa !== null) {
           return bBelowa ? -1 : 1;
         } else {
