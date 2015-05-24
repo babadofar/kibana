@@ -145,15 +145,6 @@ To view a document's field data:
 . To collapse the document details, click the *Collapse* button image:images/CollapseButton.jpg[Collapse Button].
 
 [float]
-[[sorting]]
-==== Sorting the Document List
-You can sort the documents in the Documents table by the values in any indexed field. If a time field is configured for the selected index pattern, by default the documents are sorted in reverse chronological order.
-
-To change the sort order:
-
-* Click the name of the field you want to sort by. The fields you can use for sorting have a sort button to the right of the field name. Clicking the field name a second time reverses the sort order.
-
-[float]
 [[adding-columns]]
 ==== Adding Field Columns to the Documents Table
 By default, the Documents table shows the localized version of the time field specified in the selected index pattern and the document `_source`. You can add fields to the table from the Fields list.
@@ -169,6 +160,17 @@ listed in the *Selected Fields* section at the top of the field list.
 To rearrange the field columns in the table, mouse over the header of the column you want to move and click the *Move* button.
 
 image:images/Discover-MoveColumn.jpg[Move Column]
+
+[float]
+[[sorting]]
+==== Sorting the Document List
+You can sort the documents in the Documents table by the values in any indexed field. If a time field is configured for the selected index pattern, by default the documents are sorted in reverse chronological order.
+
+To change the sort order:
+
+* Add the field to the Documents table. Click on the header of the column you want to sort by, it should display "Sort by [field name]" on mouseover. Clicking the field name a second time reverses the sort order.
+
+
 
 [float]
 [[removing-columns]]
